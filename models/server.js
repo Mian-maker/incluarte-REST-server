@@ -71,7 +71,7 @@ class Server {
  
     routes() {
         this.app.use(this.usersPATH, require('../routes/users'));
-        this.app.use(this.museumsPATH, require('../routes/museum'));
+        // this.app.use(this.museumsPATH, require('../routes/museum'));
     }
  
     /**

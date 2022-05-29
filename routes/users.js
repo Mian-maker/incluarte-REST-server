@@ -22,19 +22,29 @@
 
  // Importaciones propias
  const {
-    getUsuarios,
+    getUser,
+    getMedals,
+    getUserMedals,
+    getCards,
+    getRewards,
+    login
   } = require('../controllers/users'); // Se importan las funciones del controlador 
  
  // Inicializacion del Router
  const router = Router();
  
  // Rutas de metodos GET
- router.get('/getUsuarios', getUsuarios);
+ router.get('/getUser/user=:id_user', getUser);
+ router.get('/getMedals', getMedals);
+ router.get('/getUserMedals/user=:id_user', getUserMedals);
+ router.get('/getCards/user=:id_user', getCards);
+ router.get('/getRewards/user=:id_user', getRewards);
  
  // Rutas de metodos PUT
  
  // Rutas de metodos POST
- 
+ router.post('/login', login);
+
  // Rutas de metodos DELETE
  
  module.exports = router;
